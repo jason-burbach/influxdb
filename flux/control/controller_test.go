@@ -29,7 +29,7 @@ func TestController_Query(t *testing.T) {
 				if err != nil {
 					return nil, err
 				}
-				time.Sleep(d)
+				time.Sleep(time.Second)
 				return &mock.Program{
 					StartFn: func(ctx context.Context, alloc *memory.Allocator) (*mock.Query, error) {
 						ch := make(chan flux.Result)
