@@ -622,7 +622,7 @@ jobs:
       - bail_if_forked
       - run:
           name: Run the tests
-          command: wget -O - https://raw.githubusercontent.com/influxdata/ui/master/scripts/run-monitor-ci-tests.bash | API_KEY=${MONITOR_CI_API_KEY} MONITOR_CI_BRANCH="master" OSS_SHA=${CIRCLE_SHA1} bash
+          command: wget -O - https://raw.githubusercontent.com/influxdata/ui/master/scripts/run-monitor-ci-tests.bash | API_KEY=${MONITOR_CI_API_KEY} MONITOR_CI_BRANCH="wb-explicit-oss-img-pull" OSS_SHA=${CIRCLE_SHA1} bash
       - store_artifacts:
           path: monitor-ci/test-artifacts/results/build-oss-image
           destination: test_artifacts/results/build-oss-image
